@@ -1,1 +1,0 @@
-# Java-Clean-Coding-strategies
