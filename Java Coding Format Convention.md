@@ -65,11 +65,18 @@ By following some well defined convention, we can increase the readability of ou
 - To break the lines:
 	- Break after a comma
 	```java
-	// Bad practice										// Good practice
-	public void fun(args1, args2						public void fun(args1, args2,
-					, args3){											args3){
-		// Do something											// Do something
-	}													}
+	// Bad practice
+	public void fun(args1, args2
+ 			, args3){		
+		// Do something		
+	}
+
+
+ 	// Good practice
+	public void fun(args1, args2,
+ 			args3){		
+		// Do something		
+	}											
 	```
 	- Break before an operator
 	```java
@@ -180,8 +187,8 @@ class Mobile{
 	```
 - **Return statements**: Different types of return statements can be:
 	```java
-	return;											// Returns nothing
-	return mySongList.size();						// Returns the size of mySongList array. 
+	return;						// Returns nothing
+	return mySongList.size();				// Returns the size of mySongList array. 
 	return (colour="Red" ? "Yellow" : "Red");		// Returns the color based on condition 
 	```
 - **Conditional Statements**: Conditional statements includes: if, if-else, if-else if-else, switch
@@ -222,7 +229,7 @@ class Mobile{
 	> **NOTE:** if statement always uses curly braces {}.
 	```java
 	if(condition) 
-		count+=1;			// Wrong 
+		count+=1;					// Wrong 
 	```
 - **Loop statements**: We have *for*, *while*, *do-while* loops in Java.
 	- **for**: The structure of *for* loop:
@@ -231,31 +238,31 @@ class Mobile{
 			...
 		}
 
-		for(int i=0; i<5; i++){									// Example
+		for(int i=0; i<5; i++){				// Example
 			// statements
 		}
 		``` 
 	- **while**: The *while* loop only works on the basis of a specific condition.
 		```java
-		while(condition){										// Definition
+		while(condition){					// Definition
 			...
 		}
 
 		int i=5;
-		while(i>0){												// Example:
+		while(i>0){						// Example:
 			// statements
 			i-=1;
 		}
 		```
 	- **do-while:** A *do-while* loop can be defined as:
 		```java
-		do{													// Definition
+		do{							// Definition
 			// statements
 		}while(condition);
 
 
 		int i=5;
-		do{													// Example
+		do{							// Example
 			// statements
 			i-=1;
 		}while(i>0)
@@ -300,13 +307,13 @@ class Mobile{
 	``` 
 - Use the pronounceable words instead of using any type of random name.
 	```java
-	List<User> sdafekfd = new ArrayList <User> (); 		// Bad practice
+	List<User> sdafekfd = new ArrayList <User> ();				// Bad practice
 
-	List<User> users = new ArrayList <User> (); 		// Good practice.
+	List<User> users = new ArrayList <User> (); 				// Good practice.
 	```
 - To change or modify the name, we should always use searchable names rather than using single letter names for any variable or constants.
 	```java
-	if(totalUser>10){					`				// Bad practice	
+	if(totalUser>10){					`		// Bad practice	
 		return "User limit exceeded !";
 	}
 
@@ -332,10 +339,8 @@ We have already discussed about the naming convention for writing a function/met
 	}
 	```
 - Methods should have two or less than two arguments because "The fewer the better". 
-- We can keep in mind that our method should be kept free from having *side effects*.
-	```java
-	
-	```
+- We can keep in mind that our method should be kept free from having *side effects*. Basically side effects may be responsible for changing the passed parameters, in case of passing by reference, or maybe changing a global variable.
+
 
 ### Some useful programming practices
 - To initialize any class property, we should always declare them as **private** so that we can keep them protective and secure from outside of that class.
@@ -361,14 +366,14 @@ We have already discussed about the naming convention for writing a function/met
 
 
 		X = a+b;
-		Z = X + Y;						// Good practice 
+		Z = X + Y;					// Good practice 
 		```
 - In terms of multiple conditional checking statements, we should always use first parenthesis to separate each checking statemnt.
 	```java
-		if(a==b && b==c) { ... }		// Bad practice
+		if(a==b && b==c) { ... }			// Bad practice
 
 
-		if((a==b) && (b==c)) { ... }	// Good practice
+		if((a==b) && (b==c)) { ... }			// Good practice
 		```
 - To keep our code more readable and understandable, we should use the proper intention that makes the code more structured & more organized.
 	```java
@@ -376,7 +381,7 @@ We have already discussed about the naming convention for writing a function/met
 		else return false;
 
 
-		return booleanCondition;					// Be Straight-forward.
+		return booleanCondition;			// Be Straight-forward.
 		``` 
 - If the method's outcome only depends on binary conditional checking, we can use ternary operator instead of *if-else* statements.
 	```java
